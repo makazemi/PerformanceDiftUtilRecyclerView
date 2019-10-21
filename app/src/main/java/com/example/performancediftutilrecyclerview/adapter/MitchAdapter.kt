@@ -11,7 +11,7 @@ import com.example.performancediftutilrecyclerview.R
 import com.example.performancediftutilrecyclerview.model.BlogPost
 import kotlinx.android.synthetic.main.layout_blog_list_item.view.*
 
-class MyAdapter(private val interaction: Interaction? = null): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MitchAdapter(private val interaction: Interaction? = null): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BlogPost>() {
 

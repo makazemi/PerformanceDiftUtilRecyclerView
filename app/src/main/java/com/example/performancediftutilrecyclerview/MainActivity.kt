@@ -4,16 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.performancediftutilrecyclerview.adapter.MyAdapter
+import com.example.performancediftutilrecyclerview.adapter.MitchAdapter
 import com.example.performancediftutilrecyclerview.model.BlogPost
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(),MyAdapter.Interaction {
+class MainActivity : AppCompatActivity(),MitchAdapter.Interaction {
 
 
     val TAG="MainActivity"
 
-    private lateinit var blogAdapter:MyAdapter
+    private lateinit var blogAdapter:MitchAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(),MyAdapter.Interaction {
     }
 
     private fun initRcy(){
-        blogAdapter=MyAdapter(this)
+        blogAdapter=MitchAdapter(this)
         recyclerView.apply {
             layoutManager=LinearLayoutManager(context)
             adapter=blogAdapter
